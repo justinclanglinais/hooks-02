@@ -11,7 +11,7 @@ function App () {
   const [total, setTotal] = useState(0);
   
   useEffect(sumSubmissions)
-  
+
   function handleClickArmbars () {
     setArmbars(armbars + 1)
   }
@@ -21,9 +21,10 @@ function App () {
   function handleClickOmoplatas () {
     setOmoplatas(omoplatas + 1)
   }
+
   function sumSubmissions () {
     setTotal(armbars + triangles + omoplatas)
-    document.title = `${total} subs`
+    document.title = `${total} submissions`
   }
   
 
@@ -47,7 +48,7 @@ function App () {
         </button>
         <Omoplatas omoplatas={omoplatas} />
       </div>
-      {total} total submissions
+      <h1> I got {total} total submissions tonight :)</h1>
     </div>
   );
 }
