@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Armbars from './components/Armbars.js';
 import Triangles from './components/Triangles.js';
@@ -8,7 +8,10 @@ function App () {
   const [armbars, setArmbars] = useState(0);
   const [triangles, setTriangles] = useState(0);
   const [omoplatas, setOmoplatas] = useState(0);
-
+  const [total, setTotal] = useState(0);
+  
+  useEffect(sumSubmissions)
+  
   function handleClickArmbars () {
     setArmbars(armbars + 1)
   }
@@ -18,6 +21,11 @@ function App () {
   function handleClickOmoplatas () {
     setOmoplatas(omoplatas + 1)
   }
+  function sumSubmissions () {
+    setTotal(armbars + triangles + omoplatas)
+    document.title = `${total} subs`
+  }
+  
 
   return (
     <div className="App">
@@ -39,6 +47,7 @@ function App () {
         </button>
         <Omoplatas omoplatas={omoplatas} />
       </div>
+      {total} total submissions
     </div>
   );
 }
