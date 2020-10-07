@@ -5,7 +5,7 @@ class Triangles extends React.Component {
         const triangles = this.props.triangles
         return (
             <div>
-                <h1>I got {triangles} triangles tonight!</h1>
+                <h2>I got {triangles} triangles tonight!</h2>
             </div>
         );
     };

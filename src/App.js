@@ -13,10 +13,10 @@ function App () {
     setArmbars(armbars + 1)
   }
   function handleClickTriangles () {
-    setArmbars(triangles + 1)
+    setTriangles(triangles + 1)
   }
   function handleClickOmoplatas () {
-    setArmbars(omoplatas + 1)
+    setOmoplatas(omoplatas + 1)
   }
 
   return (

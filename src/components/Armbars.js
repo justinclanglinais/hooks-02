@@ -5,7 +5,7 @@ class Armbars extends React.Component {
         const armbars = this.props.armbars
         return (
             <div>
-                <h1>I got {armbars} armbars tonight!</h1>
+                <h2>I got {armbars} armbars tonight!</h2>
             </div>
         );
     };
